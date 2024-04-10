@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="background-image"></div>
+
+    <div class="box">
+        <div class="container">
+            <span> </span>
+            <header> </header>
+          <form action="https://formspree.io/your@email.com" method="POST">
+            <div class="input-field">
+              <label for="name"></label>
+              <input type="text" id="name" name="name" class="input" placeholder="Enter your name" required>
+              <i class="bx bx-user"></i>
+            </div>
+      <BR>
+            <div class="input-field">
+              <label for="email"></label>
+              <input type="email" id="email" name="email" class="input" placeholder="Enter your email" required>
+              <i class="bx bx-envelope"></i> </div>
+      
+            <br>
+      
+            <div class="input-field">
+              <input type="submit" class="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+      
+
+
+  </div>
+<style>
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.container {
+
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px 0 15px;
+}
+
+span {
+  color: #fff;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}
+
+header {
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  color: #080808;
+}
+
+.input-field .input {
+  height: 45px;
+  width: 87%;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  color: #080808;
+  padding: 0 0 0 42px;
+  background: rgba(7, 7, 7, 0.1);
+  font-weight: 900;
+  
+}
+
+
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.submit {
+  border: none;
+  opacity: 50%;
+
+  font-size: 15px;
+  font-weight: 900;
+  outline: none;
+  border: none;
+  outline: none;
+ font-stretch: semi-condensed;
+  color: #070505;
+  padding: 0 0 0 42px;
+  background: rgba(17, 14, 14, 0.1);
+
+
+</style>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+<style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+form {
+  width: 450px;
+  margin: 17% auto;
+  height: 50vh;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7; /* Adjust opacity for desired visibility */
+  animation: changeBackground 6s linear infinite;
+}
+
+@keyframes changeBackground {
+  0% { background-image: url("./p\ \(1\).jpg"); }
+  25% { background-image: url("./p\ \(2\).jpg"); }
+  50% { background-image: url("./p\ \(3\).jpg"); }
+  75% { background-image: url("./MM.PNG"); }
+  100% { background-image: url("./p\ \(2\).jpg"); }
+}
+
+.signup-form {
+  background-color: rgb(96, 96, 96);
+  opacity: 70%;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  position: relative; /* Make the form positioned relative to its container */
+  z-index: 1; /* Give the form a higher stacking order to appear above the background image */
+}
+
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.signup-form input,
+.signup-form button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.signup-form button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .signup-form {
+    padding: 20px;
+  }
+}
+
+
+</style>
+<script>
+
+    // This script is just an example and doesn't handle form submission. 
+// You'll need to implement your own logic for that.
+
+const backgroundImage = document.querySelector('.background-image');
+
+// Replace these with your actual image paths
+const images = [
+  "image1.jpg",
+  "image2.jpg",
+  "image3.jpg",
+  "image4.jpg"
+];
+
+let currentImageIndex = 0;
+
+setInterval(() => {
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  backgroundImage.style.backgroundImage = `url(${images[currentImageIndex]})`;
+}, 6000); // Change image every 6 seconds (6000 milliseconds)
+
+</script>
